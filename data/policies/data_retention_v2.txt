@@ -1,0 +1,14 @@
+[SECTION: Purpose]
+This policy establishes data retention and archival requirements for all customer and employee records.
+
+[SECTION: Scope]
+This policy applies to all departments and third-party processors handling personal data.
+
+[SECTION: Retention Period]
+All customer records must be retained for a minimum of 5 years from the date of last interaction.
+
+[SECTION: Archival]
+Records older than 3 years must be moved to cold storage within 90 days.
+
+[SECTION: Disposal]
+Records past their retention period must be securely deleted within 30 days of expiry.

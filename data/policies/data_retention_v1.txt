@@ -1,0 +1,11 @@
+[SECTION: Purpose]
+This policy establishes data retention requirements for all customer records.
+
+[SECTION: Scope]
+This policy applies to all departments handling personal data.
+
+[SECTION: Retention Period]
+All customer records must be retained for a minimum of 3 years from the date of last interaction.
+
+[SECTION: Disposal]
+Records past their retention period must be securely deleted within 30 days of expiry.

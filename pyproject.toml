@@ -1,0 +1,21 @@
+[project]
+name = "regradar-ai"
+version = "0.1.0"
+description = "AI-assisted regulatory change analysis and policy impact identification"
+readme = "README.md"
+requires-python = ">=3.11"
+# No runtime dependencies in Milestone 1 — stdlib only.
+dependencies = []
+
+[project.optional-dependencies]
+# Install dev extras with:  py -m pip install -e ".[dev]"
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+# Tell pytest where to look for tests and which Python files contain them.
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+# Show short tracebacks for cleaner output; use "long" when debugging.
+tb = "short"
