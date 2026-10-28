@@ -17,5 +17,5 @@ testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
-# Show short tracebacks for cleaner output; use "long" when debugging.
-tb = "short"
+# --tb has no direct ini key; pass it as a CLI flag via addopts instead.
+addopts = "--tb=short"

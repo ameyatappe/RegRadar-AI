@@ -25,8 +25,8 @@ generates a --help message automatically.  No third-party library needed.
 Python docs:  https://docs.python.org/3/library/argparse.html
 """
 
-from __future__ import annotations
-
+# Note: `from __future__ import annotations` (PEP 563) is intentionally
+# absent — see regradar/models.py for the rationale.
 import argparse
 import sys
 from pathlib import Path

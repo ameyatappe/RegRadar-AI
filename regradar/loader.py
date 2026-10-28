@@ -21,8 +21,8 @@ Rules the loader enforces:
   • A file with no valid markers raises ValueError (not a silent empty result).
 """
 
-from __future__ import annotations
-
+# Note: `from __future__ import annotations` (PEP 563) is intentionally
+# absent — see regradar/models.py for the rationale.
 import re
 import warnings
 from pathlib import Path
@@ -116,7 +116,7 @@ def _parse_sections(text: str) -> list[Section]:
         warnings.warn(
             f"Text found before the first [SECTION:] marker will be ignored: "
             f"{preamble[:80]!r}",
-            stacklevel=3,
+            stacklevel=2,  # 1=_parse_sections, 2=load_document (the public API).
         )
 
     # Slice off the preamble; what remains alternates [heading, body, heading, body, ...].
@@ -135,7 +135,7 @@ def _parse_sections(text: str) -> list[Section]:
             warnings.warn(
                 f"Duplicate section heading '{heading}' — only the last "
                 "occurrence will be used.",
-                stacklevel=3,
+                stacklevel=2,  # 1=_parse_sections, 2=load_document (the public API).
             )
         seen_headings.add(heading)
 

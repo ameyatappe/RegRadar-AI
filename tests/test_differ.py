@@ -22,8 +22,8 @@ Running the tests
 The -v flag prints one line per test function with a PASSED / FAILED status.
 """
 
-from __future__ import annotations
-
+# Note: `from __future__ import annotations` (PEP 563) is intentionally
+# absent — see regradar/models.py for the rationale.
 import warnings
 
 import pytest

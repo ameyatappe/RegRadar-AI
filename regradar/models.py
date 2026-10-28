@@ -16,8 +16,10 @@ through raw strings or plain dicts.  The benefits:
 Python docs:  https://docs.python.org/3/library/dataclasses.html
 """
 
-from __future__ import annotations
-
+# Note: `from __future__ import annotations` (PEP 563) is intentionally
+# absent.  Python 3.14 deprecates it because PEP 649 makes deferred
+# evaluation of annotations the default.  All annotation syntax used here
+# (e.g. `str | None`, `list[Section]`) is natively supported on Python ≥3.10.
 from dataclasses import dataclass, field
 
 

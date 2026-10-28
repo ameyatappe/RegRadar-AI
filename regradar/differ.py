@@ -30,8 +30,8 @@ and ' ' (space) are context lines that appear in both.
 Python docs:  https://docs.python.org/3/library/difflib.html#difflib.unified_diff
 """
 
-from __future__ import annotations
-
+# Note: `from __future__ import annotations` (PEP 563) is intentionally
+# absent — see regradar/models.py for the rationale.
 import difflib
 
 from regradar.models import (

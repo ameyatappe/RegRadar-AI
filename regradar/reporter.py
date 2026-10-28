@@ -25,8 +25,8 @@ Python docs:  https://docs.python.org/3/library/json.html
               https://docs.python.org/3/library/dataclasses.html#dataclasses.asdict
 """
 
-from __future__ import annotations
-
+# Note: `from __future__ import annotations` (PEP 563) is intentionally
+# absent — see regradar/models.py for the rationale.
 import dataclasses
 import json
 import sys
