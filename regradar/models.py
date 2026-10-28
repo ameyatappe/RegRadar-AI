@@ -124,3 +124,33 @@ class DiffResult:
             if change.change_type in counts:
                 counts[change.change_type] += 1
         return counts
+
+
+# ── Retrieval results ─────────────────────────────────────────────────────────
+
+@dataclass
+class RetrievalResult:
+    """One ranked section returned by a keyword search.
+
+    Produced by ``PolicyRetriever.search()`` and consumed by callers that
+    need to know *which* section matched a query, how well it matched, and
+    where it came from.
+
+    Attributes:
+        heading:      The section heading, e.g. "Retention Period".
+        text:         The full body text of the matched section.
+        score:        BM25 relevance score — higher scores generally indicate
+                      stronger matches, but a zero score does not necessarily
+                      exclude a result if the section shares query tokens.
+        version_tag:  The version label of the document this section came
+                      from, e.g. "v1" or "2024-rev2".  Preserves provenance
+                      so callers can cite the exact source.
+        rank:         One-based position in the result list (1 = best match).
+                      Useful for display ("Result 1 of 3") and for tests that
+                      assert ordering without comparing raw float scores.
+    """
+    heading:     str
+    text:        str
+    score:       float
+    version_tag: str
+    rank:        int
